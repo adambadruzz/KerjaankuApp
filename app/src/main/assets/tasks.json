@@ -1,0 +1,97 @@
+{
+  "tasks" : [
+    {
+      "mainTask":{
+        "id":0,
+        "title":"Task 1",
+        "details":"Ini adalah task 1",
+        "date":"2020-07-02",
+        "isComplete":false
+      },
+      "subTasks":[
+        {
+          "id":0,
+          "idTask":0,
+          "title":"Ini adalah sub task 1",
+          "isComplete":false
+        },
+        {
+          "id":1,
+          "idTask":0,
+          "title":"Ini adalah sub task 2",
+          "isComplete":false
+        },
+        {
+          "id":2,
+          "idTask":0,
+          "title":"Ini adalah sub task 3",
+          "isComplete":false
+        }
+      ]
+    },
+    {
+      "mainTask":{
+        "id":1,
+        "title":"Task 2",
+        "details":"Ini adalah task 2",
+        "date":"2020-08-09",
+        "isComplete":false
+      }
+    },
+    {
+      "mainTask":{
+        "id":2,
+        "title":"Task 3",
+        "details":"Ini adalah task 3",
+        "isComplete":false
+      }
+    },
+    {
+      "mainTask":{
+        "id":3,
+        "title":"Task 4",
+        "details":"Ini adalah task 4",
+        "date":"2020-07-02",
+        "isComplete":false
+      },
+      "subTasks":[
+        {
+          "id":0,
+          "idTask":3,
+          "title":"Ini adalah sub task 1",
+          "isComplete":false
+        },
+        {
+          "id":1,
+          "idTask":3,
+          "title":"Ini adalah sub task 2",
+          "isComplete":false
+        },
+        {
+          "id":2,
+          "idTask":3,
+          "title":"Ini adalah sub task 3",
+          "isComplete":false
+        }
+      ]
+    },
+    {
+      "mainTask":{
+        "id":4,
+        "title":"Task 5",
+        "details":"Ini adalah task 5",
+        "date":"2020-08-09",
+        "isComplete":false
+      }
+    },
+    {
+      "mainTask":{
+        "id":5,
+        "title":"Task 6",
+        "details":"Ini adalah task 6",
+        "date":"",
+        "isComplete":false
+      }
+    }
+  ]
+}

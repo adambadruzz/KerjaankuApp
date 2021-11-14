@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">KerjaanKu</string>
+    <string name="let_s_more_productive">Let\'s more productive</string>
+    <string name="home">Home</string>
+    <string name="task_complete">Task Complete</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_task">My Task</string>
+    <string name="tell_me_what_you_want_to_do">Tell me what you want to do?</string>
+    <string name="please_complete_your_task">Please complete your task</string>
+    <string name="keep_the_spirit_to_complete_your_task">Keep the spirit to complete your task</string>
+    <string name="my_complete_task">My Complete Task</string>
+
+    <string name="submit">Submit</string>
+    <string name="add_sub_task">Add Sub Task</string>
+    <string name="add_date">Add Date</string>
+    <string name="add_details">Add Details</string>
+    <string name="title">Title</string>
+    <string name="enter_title">Enter Title...</string>
+    <string name="remove_task">Remove Task</string>
+    <string name="please_field_your_title">Please Field Your Title</string>
+    <string name="failed_add_data_to_database">Failed add data to Database</string>
+    <string name="sucess_add_data_to_database">Success add data to Database</string>
+
+    <string name="failed_update_data_to_database">Failed update data to Database</string>
+    <string name="sucess_update_data_to_database">Success update data to Database</string>
+    <string name="update">Update</string>
+</resources>

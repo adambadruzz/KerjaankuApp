@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.newtask.NewTaskActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarNewTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:theme="@style/AppTheme.ActionBar"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbNewTask"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarNewTask">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etTitleTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/title"
+                android:textColorHint="@color/secondaryColorPrimaryDark"
+                android:textColor="@color/secondaryColorPrimary"
+                android:textSize="28sp"
+                android:inputType="textMultiLine"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageViewChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_chat_24"
+                android:tint="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etAddDetailsTask"
+                app:layout_constraintBottom_toBottomOf="@id/etAddDetailsTask"/>
+
+            <EditText
+                android:id="@+id/etAddDetailsTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/add_details"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toEndOf="@id/imageViewChat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etTitleTask"/>
+
+            <ImageView
+                android:id="@+id/imageViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_date_range_black_24dp"
+                android:tint="@android:color/darker_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btnAddDateTask"
+                app:layout_constraintBottom_toBottomOf="@id/btnAddDateTask"/>
+
+            <Button
+                android:id="@+id/btnAddDateTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/add_date"
+                android:minHeight="20dp"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/btnRemoveDateTask"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/imageViewDate"
+                app:layout_constraintTop_toBottomOf="@+id/etAddDetailsTask" />
+
+            <ImageButton
+                android:id="@+id/btnRemoveDateTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_close_24"
+                android:tint="@android:color/darker_gray"
+                android:background="@android:color/transparent"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btnAddDateTask"
+                app:layout_constraintBottom_toBottomOf="@id/btnAddDateTask"/>
+
+            <ImageView
+                android:id="@+id/imageViewSubTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_subdirectory_arrow_right_24"
+                android:tint="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rvAddSubTask"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAddSubTask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                tools:itemCount="4"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/imageViewSubTask"
+                app:layout_constraintTop_toBottomOf="@id/btnAddDateTask"
+                tools:listitem="@layout/item_add_sub_task" />
+
+            <Button
+                android:id="@+id/btnAddSubTask"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="@string/add_sub_task"
+                android:background="@android:color/transparent"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="72dp"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvAddSubTask"
+                app:layout_constraintStart_toStartOf="@id/rvAddSubTask"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnSubmitTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:layout_margin="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/bg_submit_task"
+        android:textColor="@color/secondaryColorPrimaryDark"
+        android:drawableStart="@drawable/ic_done_secondary_color_primary_dark_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
